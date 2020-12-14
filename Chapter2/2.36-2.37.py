@@ -91,7 +91,7 @@ class Ecosystem:
             if cur_a.get_gender() == aft_a.get_gender():
                 if cur_a.get_strength() > aft_a.get_strength():
                     self._river[cur], self._river[aft] = None, cur_a
-                else:
+                elif cur_a.get_strength() < aft_a.get_strength():
                     self._river[cur] = None
             else:
                 baby = aft_a.create() if cur_a.get_gender() else cur_a.create()
